@@ -20,3 +20,14 @@ npm install
 ```
 nodemon index.js
 ```
+---
+
+## REST API Tables
+| Path      | Method | Description | Request Body |
+| ----------| ------ | ----------- | ------------ |
+| /api/courses | GET | Get all course data | -
+| /api/courses/:id | GET | Get course data based on given course id | -
+| /api/courses | POST | Insert new course data | name: String, More than 3 characters
+| /api/courses/:id | PUT | Update course data based on given course id | name: String, More than 3 characters
+| /api/courses/:id | Delete | Delete data based on given course id | -
+
