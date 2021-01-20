@@ -3,7 +3,6 @@ const express = require('express');
 const router = express.Router();
 const Joi = require('joi');
 const db = require('../../database/database');
-const dbServer = require('../../database/database')
 
 
 const httpCode = {
@@ -32,7 +31,7 @@ router.route('/')
     .get( async (req, res) => {
       let courses = await db.fetchData();
       if (!courses) return res.status(httpCode.notFound).send(`Courses data is not found...`);
-      
+
       res.send(courses);
     }) // Get all data
     .post( async (req, res) => {
