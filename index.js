@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000; // Set express application port to match with environment variables
-const courseRouter = require('./routes/api/courses')
+const courseRouter = require('./routes/api/courses');
 
 app.use(express.json()); // JSON data usage in express
 app.use('/api/courses', courseRouter);
